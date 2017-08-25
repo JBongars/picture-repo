@@ -1,0 +1,22 @@
+{
+  "name": "picture-repo",
+  "version": "0.0.1",
+  "description": "Application that allow users to upload and share pictures",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JBongars/picture-repo.git"
+  },
+  "author": "Julien Bongars",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JBongars/picture-repo/issues"
+  },
+  "homepage": "https://github.com/JBongars/picture-repo#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
