@@ -7,8 +7,6 @@
 
 "use strict"
 
-console.log("ROUTES LOADED")
-
 var express         =  require("express");
 
 module.exports = function(app){
@@ -21,4 +19,6 @@ module.exports = function(app){
         console.log("Error: 404");
         res.send("<h1>404</h1><p>Page not found</p>"); //reset this to 404 page
     });
+
+    console.log("ROUTES LOADED")
 }
