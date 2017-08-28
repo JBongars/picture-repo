@@ -11,7 +11,7 @@ var express         =  require("express");
 var bodyParser      =  require("body-parser");
 var cookieParser    =  require("cookie-parser");
 var session         =  require("express-session");
-var passport        =  require("passport"); //not sure
+var passport        =  require("passport");
 var flash           =  require("connect-flash"); //not sure
 
 //var config          =  require("./config");
@@ -60,10 +60,10 @@ app.use(passport.session());
 
 */
 
-require('./routes.js');
+require('./apps/routes')(app);
 
 app.listen(NODE_PORT, function() {
     console.log("Web App started at " + NODE_PORT);
-})
+});
 
 
