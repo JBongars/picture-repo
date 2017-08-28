@@ -1,5 +1,7 @@
 /**
- * Registration Controller for js
+ * Title:   Controller for registration Page
+ * Author:  Julien Bongars
+ * Date:    28/08/2017
  */
 
 (function(){

@@ -24,7 +24,7 @@
                         templateUrl: "../app/users/foo.html"
                     }
                 },
-                resolve: {
+                resolve: /*optional - check for login*/ {
                     authenticated: function (bar){
                         console.log("bar");
                         console.log(bar.foo);

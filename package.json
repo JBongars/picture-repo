@@ -4,7 +4,9 @@
   "description": "Application that allow users to upload and share pictures",
   "main": "server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss client/scss/style.scss client/css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,13 @@
   "homepage": "https://github.com/JBongars/picture-repo#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.4",
-    "morgan": "^1.8.2"
+    "express-session": "^1.15.5",
+    "log4js": "^2.3.3",
+    "morgan": "^1.8.2",
+    "node-sass": "^4.5.3",
+    "passport": "^0.4.0"
   }
 }
