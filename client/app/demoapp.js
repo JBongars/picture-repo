@@ -1,6 +1,10 @@
 /**
- * Client side code.
+ * Title        :   Demo App for testing
+ * Author       :   Julien Bongars
+ * Date         :   28/8/2017
+ * Comments     :   To be updated
  */
+
 (function() {
     var app = angular.module("demoApp", []);
 

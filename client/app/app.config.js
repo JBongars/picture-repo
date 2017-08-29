@@ -7,6 +7,7 @@
 
  
  (function(){
+     
     angular
         .module("pictureRepoApp")
         .config(pictureRepoAppConfig);
