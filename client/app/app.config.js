@@ -5,10 +5,12 @@
  * Comments     :   To be populated at a later date
  */
 
+ 
  (function(){
-     angular
+    angular
         .module("pictureRepoApp")
         .config(pictureRepoAppConfig);
+    
     pictureRepoAppConfig.$inject = ["$stateProvider", "$urlRouterProvider"];
 
     function pictureRepoAppConfig($stateProvider, $urlRouterProvider)
@@ -32,9 +34,8 @@
                     }
                 },
                 controller: 'foo',
-                controllerAs: 'ctrl'
-            })
+            });
 
-        $urlRouterProvider.otherwise("index.html")
+        $urlRouterProvider.otherwise('/')
     }
  })();

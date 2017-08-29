@@ -7,9 +7,9 @@
 
 (function(){
     "use strict";
-    var app = angular.module("RegistrationApp", []);
+    var app = angular.module("userLoginApp", []);
 
-    app.controller("RegistrationCtrl", ["$http", RegistrationCtrl]);
+    app.controller("userLoginCtrl", ["$http", userLoginCtrl]);
 
     function RegistrationCtrl($http){
         var self = this; //vm

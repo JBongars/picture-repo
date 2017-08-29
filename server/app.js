@@ -12,19 +12,17 @@ var bodyParser      =  require("body-parser");
 var cookieParser    =  require("cookie-parser");
 var session         =  require("express-session");
 var passport        =  require("passport");
-var flash           =  require("connect-flash"); //not sure
 
 //var config          =  require("./config");
 
 var morgan          =  require("morgan");
 //var path            =  require("path");
-var log4js          =  require("log4js"); //not sure
+var log4js          =  require("log4js"); //research
 
 //Define app as express()
 var app = express();
 
 //Use functions
-app.use(flash());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -40,7 +38,6 @@ var theHTTPLog = morgan({
 
 //Console logs
 console.log(__dirname);
-console.log(__dirname + "/../client/");
 const NODE_PORT = process.env.NODE_PORT || 3000; //set port num
 
 app.use(express.static(__dirname + "/../client/")); //set default directory

@@ -7,11 +7,12 @@
 
 (function (){
     angular
-        .module("pictureRepoApp", [
+        .module("pictureRepoApp", 
+        [
             "ngFileUpload",
             "ui.router",
             "ngProgress",
             "ngMessages",
             "data-table"
-        ]);
+        ]); 
 })();

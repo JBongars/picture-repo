@@ -15,9 +15,9 @@ module.exports = function(app){
         res.status(200).send("Register...");
     });
 
-    app.use(function(req, res){
-        console.log("Error: 404");
-        res.send(""); //reset this to 404 page
+    app.use(function(req, res) {
+        //res.sendFile("../library/3.jpeg");
+        res.send("Error: 404");
     });
 
     console.log("ROUTES LOADED")
