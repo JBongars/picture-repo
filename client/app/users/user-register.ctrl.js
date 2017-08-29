@@ -1,7 +1,8 @@
 /**
- * Title:   Controller for registration Page
- * Author:  Julien Bongars
- * Date:    28/08/2017
+ * Title        :   Controller for registration Page
+ * Author       :   Julien Bongars
+ * Date         :   28/08/2017
+ * Comments     :   To be updated
  */
 
 (function(){
