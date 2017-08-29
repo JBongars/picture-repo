@@ -1,6 +1,40 @@
-$badass: #bada55;
 
-body { 
-  margin: 0; 
-  background-color: $badass; 
+//imported libraries
+
+//@import 'modal';
+
+.home-front{
+    position: relative;
+    background: #222 url("../assets/images/1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 100vh;
+}
+
+#home-centre-box {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: inline;
+    inline-size: 500px;
+    
+    img {
+        display: block;
+        margin: auto;
+    }
+}
+
+.home-logo {
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+
+.home-search-box{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

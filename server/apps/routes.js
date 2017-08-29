@@ -17,7 +17,7 @@ module.exports = function(app){
 
     app.use(function(req, res){
         console.log("Error: 404");
-        res.sendfile("<h1>404</h1><p>Page not found</p>"); //reset this to 404 page
+        res.send(""); //reset this to 404 page
     });
 
     console.log("ROUTES LOADED")

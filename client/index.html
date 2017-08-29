@@ -12,6 +12,11 @@
   <!--BOWER_COMPONENTS_CSS_START-->
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 
   <!--font-awesome-->
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
@@ -22,99 +27,51 @@
 
   <script src="bower_components/angular/angular.min.js"></script>
 
+  <!--jQuery-->
+  <script src="bower_components/jquery/dist/jquery.min"></script>
+
   <!--favicon-->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <!--BOWER_COMPONENTS_CSS_END-->
 
-  <!--CUSTOM_CSS_START--> <!--to review-->
-  <!--<link rel="stylesheet" href="foo" />-->
-
-  <style type="text/css">
-
-    .home-front{
-      position: relative;
-      background: #222 url("assets/images/1.jpeg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      height: 100vh;
-    }
-
-    #home-centre-box {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
-      display: inline;
-      inline-size: 500px;
-    }
-
-    #home-centre-box img {
-      display: block;
-      margin: auto;
-    }
-
-    .home-logo {
-      display: block;
-      width: 150px;
-      margin: auto;
-    }
-
-    .home-search-box{
-      max-width: 500px;
-      margin: auto;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    /* The Modal (background) */
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-
-    /* Modal Content/Box */
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-    }
-
-    /* The Close Button */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-  </style>
-
-  <!--CUSTOM_CSS_END-->
-
-
+  <!--CSS-->
+  <link rel="stylesheet" href="css/style.css" />
 
 </head>
 
 <body ng-cloak>
+
+  <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+          <div class="modal-content">
+
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h4 class="modal-title">Confirmation</h4>
+              </div>
+
+              <div class="modal-body">
+                  <p>Do you want to save changes you made to document before closing?</p>
+                  <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#myModal").modal('show');
+    });
+  </script>
+
+
   <section class="home-front container-fluid">
     
     <div class="col-lg-4 col-sm-2" id="home-centre-box">
@@ -124,25 +81,13 @@
       <div class="home-search-box form-group row">
         <input class="form-control" type="text" ng-model="search" placeholder="Artisanal kale" id="home-search">
       </div>
-      
-      <h1>You entered: {{search}}</h1>
-      
-    </div>
-  
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
-    
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
-      </div>
+      <h1 style="color: #fff">{{search}}</h1>
     </div>
 
   </section>
 
   <script>
+
     //app
     var app = angular.module('pictureSearchApp', []);
     
@@ -154,29 +99,10 @@
       }
     }
 
-    //Modal
-    var modal = document.getElementById('myModal');
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal 
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
   </script>
+  
+  <!--Vanilla js modules
+  <script src="/vanilla/modal-ctrl.js"></script>-->
 
 </body>
 
